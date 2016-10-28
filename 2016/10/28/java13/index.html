@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>林雄伟_个人博客</title>
+  <title>10.接口 | 林雄伟_个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="林雄伟_个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="林雄伟_个人博客">
-<meta property="og:url" content="http://linxwff.github.io/index.html">
+  <meta name="description" content="接口定义 （规范）
+类是一种具体实现体，而接口定义了某一批类所需要遵守的规范，接口不关心这些类的内部数据，也不关心这些类里面的方法实现谢姐，他只规定类必须提供某一些方法。
+
+基本语法 （多继承的）[修饰符] interface 接口名 [extends 父级接口1，父级接口2]｛    常量定义，    抽象方法定义，｝
+
+接口就是用来被继承被实现的，修饰符一般为public没有 private">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10.接口">
+<meta property="og:url" content="http://linxwff.github.io/2016/10/28/java13/index.html">
 <meta property="og:site_name" content="林雄伟_个人博客">
-<meta property="og:description" content="林雄伟_个人博客">
+<meta property="og:description" content="接口定义 （规范）
+类是一种具体实现体，而接口定义了某一批类所需要遵守的规范，接口不关心这些类的内部数据，也不关心这些类里面的方法实现谢姐，他只规定类必须提供某一些方法。
+
+基本语法 （多继承的）[修饰符] interface 接口名 [extends 父级接口1，父级接口2]｛    常量定义，    抽象方法定义，｝
+
+接口就是用来被继承被实现的，修饰符一般为public没有 private">
+<meta property="og:updated_time" content="2016-10-28T08:41:24.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="林雄伟_个人博客">
-<meta name="twitter:description" content="林雄伟_个人博客">
+<meta name="twitter:title" content="10.接口">
+<meta name="twitter:description" content="接口定义 （规范）
+类是一种具体实现体，而接口定义了某一批类所需要遵守的规范，接口不关心这些类的内部数据，也不关心这些类里面的方法实现谢姐，他只规定类必须提供某一些方法。
+
+基本语法 （多继承的）[修饰符] interface 接口名 [extends 父级接口1，父级接口2]｛    常量定义，    抽象方法定义，｝
+
+接口就是用来被继承被实现的，修饰符一般为public没有 private">
   
     <link rel="alternative" href="/atom.xml" title="林雄伟_个人博客" type="application/atom+xml">
   
@@ -27,9 +43,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -41,8 +54,8 @@
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -230,9 +243,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-java13" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java13" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/10/28/java13/" class="article-date">
@@ -248,12 +259,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java13/">10.接口</a>
+    <h1 class="article-title" itemprop="name">
+      10.接口
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -272,316 +298,147 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/10/28/java13/">10.接口</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 LinxwFF 的个人博客">LinxwFF</a></p>
+        <p><span>发布时间:</span>2016年10月28日 - 16时11分</p>
+        <p><span>最后更新:</span>2016年10月28日 - 16时41分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/28/java13/" title="10.接口">http://linxwff.github.io/2016/10/28/java13/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://linxwff.github.io/2016/10/28/java13/　　作者: LinxwFF" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/10/28/java12/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">9.0java 抽象类</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#接口定义-（规范）"><span class="toc-number">1.</span> <span class="toc-text">接口定义 （规范）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本语法-（多继承的）"><span class="toc-number">2.</span> <span class="toc-text">基本语法 （多继承的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#匿名内部类实现接口"><span class="toc-number">3.</span> <span class="toc-text">匿名内部类实现接口</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-    <article id="post-java12" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/28/java12/" class="article-date">
-      <time datetime="2016-10-28T08:11:11.707Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/10/28/java13/" data-title="10.接口" data-url="http://linxwff.github.io/2016/10/28/java13/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java12/">9.0java 抽象类</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote>
-<p>抽象类只指定有那些类应有那些方法<br>不关注类的实现，约束类的实现</p>
-</blockquote>
-<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><ol>
-<li>abstract 关键字修饰定义抽象类</li>
-<li>abstract 定义抽象方法，只是声明，不需要实现</li>
-<li>包含抽象类方法的类是抽象方法</li>
-<li>抽象类中可以包含普通的方法，也可以没有抽象方法</li>
-<li>抽象类不能直接创建，可以定义引用变量</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public abstract class Telphone&#123;</div><div class="line">    public abstract void call();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-java11" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/28/java11/" class="article-date">
-      <time datetime="2016-10-28T08:11:11.283Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java11/">8.0java 引用类型转换</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ol>
-<li>向上类型转换（小到大）</li>
-<li>向下类型转换（大到小）</li>
-<li>instanceof运算符，解决引用对象的类型</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-java10" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/28/java10/" class="article-date">
-      <time datetime="2016-10-28T08:11:11.039Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java10/">7.0java 中的object 类</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="object-类"><a href="#object-类" class="headerlink" title="object 类"></a>object 类</h4><blockquote>
-<p>所有的类都继承 object 类</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public class a extends object()&#123;</div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h4 id="toString-方法"><a href="#toString-方法" class="headerlink" title="toString() 方法"></a>toString() 方法</h4><blockquote>
-<p>返回哈希CODE 码（对象地址字符串）</p>
-<h4 id="equals-方法"><a href="#equals-方法" class="headerlink" title="equals() 方法"></a>equals() 方法</h4><p>比较对象的引用是否指向同一块内存地址</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-java9" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/28/java9/" class="article-date">
-      <time datetime="2016-10-28T08:11:10.839Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/2016/10/28/java12/" title="下一篇: 9.0java 抽象类">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java9/">6.3 面向对象的三大特性（多态性）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="定义-（继承的基础上）"><a href="#定义-（继承的基础上）" class="headerlink" title="定义 （继承的基础上）"></a>定义 （继承的基础上）</h4><blockquote>
-<p>通过类实例化生成的对象具有多种形态</p>
-</blockquote>
-<h4 id="1-引用的多态"><a href="#1-引用的多态" class="headerlink" title="1.引用的多态"></a>1.引用的多态</h4><pre><code>1. 父类的引用可以指向本类对象
-2. 父类的引用可以指向子类对象
-</code></pre><h4 id="2-方法的多态"><a href="#2-方法的多态" class="headerlink" title="2.方法的多态"></a>2.方法的多态</h4><pre><code>1. 创建本类对象时，调用的方法为本类的方法
-2. 创建子类对象时，调用的方法为子类重写的方法或者继承的方法
-</code></pre>
-      
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java13/">10.接口</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java12/">9.0java 抽象类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java11/">8.0java 引用类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java10/">7.0java 中的object 类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java9/">6.3 面向对象的三大特性（多态性）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java8/">6.2 面向对象的三大特性（继承性）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java7/">6.1.2 面向对象三大特性（封装性的内部类）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java6/">6.1 面向对象的三大特性（封装性）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java5/">5.0java 中的static使用的静态方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java4/">4.0java 中的static使用的静态变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java3/">3.0构造方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java2/">2.0成员变量和局部变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java1/">1.0类的概念</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
 
 
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
