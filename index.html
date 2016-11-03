@@ -150,7 +150,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a>
+                        <a href="/tags/C语言/" style="font-size: 10px;">C语言</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/代码片段/" style="font-size: 10px;">代码片段</a> <a href="/tags/学习/" style="font-size: 15px;">学习</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
                     </div>
                 </section>
                 
@@ -232,11 +232,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-java13" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-c7" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/28/java13/" class="article-date">
-      <time datetime="2016-10-28T08:11:12.197Z" itemprop="datePublished">2016-10-28</time>
+      <a href="/2016/11/03/c7/" class="article-date">
+      <time datetime="2016-11-03T15:07:15.248Z" itemprop="datePublished">2016-11-03</time>
 </a>
     </div>
   
@@ -249,7 +249,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java13/">10.接口</a>
+      <a class="article-title" href="/2016/11/03/c7/">冒泡排序（C语言）</a>
     </h1>
   
 
@@ -259,15 +259,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="接口定义-（规范）"><a href="#接口定义-（规范）" class="headerlink" title="接口定义 （规范）"></a>接口定义 （规范）</h4><blockquote>
-<p>类是一种具体实现体，而接口定义了某一批类所需要遵守的规范，接口不关心这些类的内部数据，也不关心这些类里面的方法实现谢姐，他只规定类必须提供某一些方法。</p>
-</blockquote>
-<h4 id="基本语法-（多继承的）"><a href="#基本语法-（多继承的）" class="headerlink" title="基本语法 （多继承的）"></a>基本语法 （多继承的）</h4><p>[修饰符] interface 接口名 [extends 父级接口1，父级接口2]｛<br>    常量定义，<br>    抽象方法定义，<br>｝</p>
-<blockquote>
-<p>接口就是用来被继承被实现的，修饰符一般为public<br>没有 private protected 修饰的接口</p>
-</blockquote>
-<h4 id="匿名内部类实现接口"><a href="#匿名内部类实现接口" class="headerlink" title="匿名内部类实现接口"></a>匿名内部类实现接口</h4><p>第一种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">IPlayGame ip3 = new IPlayGame()&#123;</div><div class="line"></div><div class="line">    public void playGame()&#123;</div><div class="line">        System.out.println(&quot;使用内部类的方式实现接口&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ip3.playGame();</div></pre></td></tr></table></figure></p>
-<p>第二种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">new IPlayGame()&#123;</div><div class="line">    public void playGame()&#123;</div><div class="line">        System.out.println(&quot;使用内部类的方式实现接口&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;.playGame();</div></pre></td></tr></table></figure></p>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"># include &lt;stdio.h&gt;</div><div class="line"></div><div class="line">void sort(int *pArr, int len)</div><div class="line">&#123;</div><div class="line">	int i,j,t;</div><div class="line">	for(i=0 ; i&lt;len-1; i++)&#123;   //总共要比较 len -1 次(最后一个不用比较)</div><div class="line">		for(j=0 ; j&lt;len-1-i;j++)&#123;</div><div class="line">			if(pArr[j] &gt; pArr[i+1])&#123;	//比较如果前一个数大于后面的数交换位置</div><div class="line">				t=pArr[j];		     	//交换 ，较大的放在后面</div><div class="line">				pArr[j] = pArr[j+1];</div><div class="line">				pArr[j+1] = t;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">	int a[6] = &#123; 1, -8,8 ,-5,11,2&#125;;</div><div class="line">	int i ;</div><div class="line">	sort(a , 6);</div><div class="line"></div><div class="line">	for(i=0;i&lt;6;i++)&#123;</div><div class="line">		printf(&quot;%d &quot;,a[i]);</div><div class="line">	&#125;</div><div class="line">	printf(&quot;\n&quot;);</div><div class="line"></div><div class="line">	return 0;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -276,13 +268,13 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
+    <a class="article-category-link" href="/categories/C/">C</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码片段/">代码片段</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
       
@@ -302,11 +294,11 @@
 
 
   
-    <article id="post-java12" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-c6" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/28/java12/" class="article-date">
-      <time datetime="2016-10-28T08:11:11.707Z" itemprop="datePublished">2016-10-28</time>
+      <a href="/2016/11/03/c6/" class="article-date">
+      <time datetime="2016-11-03T15:07:14.966Z" itemprop="datePublished">2016-11-03</time>
 </a>
     </div>
   
@@ -319,7 +311,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java12/">9.0java 抽象类</a>
+      <a class="article-title" href="/2016/11/03/c6/">动态内存创建一维数组（C语言）</a>
     </h1>
   
 
@@ -329,17 +321,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote>
-<p>抽象类只指定有那些类应有那些方法<br>不关注类的实现，约束类的实现</p>
-</blockquote>
-<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><ol>
-<li>abstract 关键字修饰定义抽象类</li>
-<li>abstract 定义抽象方法，只是声明，不需要实现</li>
-<li>包含抽象类方法的类是抽象方法</li>
-<li>抽象类中可以包含普通的方法，也可以没有抽象方法</li>
-<li>抽象类不能直接创建，可以定义引用变量</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public abstract class Telphone&#123;</div><div class="line">    public abstract void call();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"># include &lt;stdio.h&gt;</div><div class="line"># include &lt;malloc.h&gt;</div><div class="line"></div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">	int len;</div><div class="line">	int *pArr;  //指针变量</div><div class="line">	int i;</div><div class="line"></div><div class="line">	printf(&quot; 请输入需要创建的数组长度:\n&quot;);</div><div class="line">	scanf(&quot;%d&quot; , &amp;len);</div><div class="line"></div><div class="line">	pArr = (int *)malloc(4 * len); //指针变量</div><div class="line">	//对数组进行赋值</div><div class="line">	printf(&quot; 对数组进行赋值，输入值:\n&quot;);</div><div class="line">	for(i=0; i&lt; len; i++)&#123;</div><div class="line">		scanf(&quot;%d&quot; , &amp;pArr[i]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	//遍历输出数组元素</div><div class="line">	printf(&quot; 遍历输出数组元素 \n&quot;);</div><div class="line">	for(i=0; i&lt; len; i++)&#123;</div><div class="line">		printf(&quot;%d&quot;, pArr[i]);</div><div class="line">		printf(&quot;\n&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	free(pArr); //释放动态分配的数组</div><div class="line"></div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -348,13 +330,13 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
+    <a class="article-category-link" href="/categories/C/">C</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码片段/">代码片段</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
       
@@ -374,11 +356,11 @@
 
 
   
-    <article id="post-java11" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-c5" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/28/java11/" class="article-date">
-      <time datetime="2016-10-28T08:11:11.283Z" itemprop="datePublished">2016-10-28</time>
+      <a href="/2016/11/03/c5/" class="article-date">
+      <time datetime="2016-11-03T15:07:14.753Z" itemprop="datePublished">2016-11-03</time>
 </a>
     </div>
   
@@ -391,7 +373,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java11/">8.0java 引用类型转换</a>
+      <a class="article-title" href="/2016/11/03/c5/">结构体基础（C语言）</a>
     </h1>
   
 
@@ -401,11 +383,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ol>
-<li>向上类型转换（小到大）</li>
-<li>向下类型转换（大到小）</li>
-<li>instanceof运算符，解决引用对象的类型</li>
-</ol>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"># include &lt;stdio.h&gt;</div><div class="line"></div><div class="line">struct Person</div><div class="line">&#123;</div><div class="line">	char name[100];  //声明字符串类型的数据类型</div><div class="line">	int age;</div><div class="line">	double sorce;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">	struct Person pe = &#123;&quot;老王&quot;, 18, 66.6&#125;;</div><div class="line"></div><div class="line">	printf(&quot;姓名: %s ,年龄: %d , 分数: %lf \n&quot;, pe.name,pe.age,pe.sorce);</div><div class="line"></div><div class="line">	//通过指针的方式</div><div class="line">	struct Person *pst = &amp;pe;</div><div class="line">	printf(&quot;姓名: %s ,年龄: %d , 分数: %lf \n&quot;, pst-&gt;name,pst-&gt;age,pst-&gt;sorce);</div><div class="line"></div><div class="line">	return 0;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -414,13 +392,13 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
+    <a class="article-category-link" href="/categories/C/">C</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码片段/">代码片段</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
       
@@ -440,11 +418,11 @@
 
 
   
-    <article id="post-java10" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-c4" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/28/java10/" class="article-date">
-      <time datetime="2016-10-28T08:11:11.039Z" itemprop="datePublished">2016-10-28</time>
+      <a href="/2016/11/03/c4/" class="article-date">
+      <time datetime="2016-11-03T15:07:14.530Z" itemprop="datePublished">2016-11-03</time>
 </a>
     </div>
   
@@ -457,7 +435,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java10/">7.0java 中的object 类</a>
+      <a class="article-title" href="/2016/11/03/c4/">结构体学生信息顺序输出（C语言）</a>
     </h1>
   
 
@@ -467,14 +445,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="object-类"><a href="#object-类" class="headerlink" title="object 类"></a>object 类</h4><blockquote>
-<p>所有的类都继承 object 类</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public class a extends object()&#123;</div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h4 id="toString-方法"><a href="#toString-方法" class="headerlink" title="toString() 方法"></a>toString() 方法</h4><blockquote>
-<p>返回哈希CODE 码（对象地址字符串）</p>
-<h4 id="equals-方法"><a href="#equals-方法" class="headerlink" title="equals() 方法"></a>equals() 方法</h4><p>比较对象的引用是否指向同一块内存地址</p>
-</blockquote>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"># include &lt;stdio.h&gt;</div><div class="line"># include &lt;malloc.h&gt;</div><div class="line"></div><div class="line">//声明数组结构</div><div class="line">struct Student</div><div class="line">&#123;</div><div class="line">	char name[100];</div><div class="line">	int age;</div><div class="line">	float sorce;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">	int count;</div><div class="line">	int i;</div><div class="line">	struct Student *pArr;</div><div class="line"></div><div class="line">	printf(&quot;输入学生个数\n&quot;);</div><div class="line">	scanf(&quot;%d&quot; , &amp;count);</div><div class="line"></div><div class="line">	//动态开辟空间</div><div class="line">	pArr = (struct Student *)malloc(count * sizeof(struct Student));</div><div class="line"></div><div class="line">	for(i= 0; i&lt; count ; i++)&#123;</div><div class="line">		printf(&quot;输入第%d个学生的信息\n&quot;, i+1);</div><div class="line"></div><div class="line">		printf(&quot;输入姓名=\n&quot;);</div><div class="line">		scanf(&quot;%s&quot; , &amp;pArr[i].name);</div><div class="line"></div><div class="line">		printf(&quot;输入年龄=\n&quot;);</div><div class="line">		scanf(&quot;%d&quot; , &amp;pArr[i].age);</div><div class="line"></div><div class="line">		printf(&quot;输入分数=\n&quot;);</div><div class="line">		scanf(&quot;%f&quot; , &amp;pArr[i].sorce);</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	for(i= 0; i&lt; count ; i++)&#123;</div><div class="line">		printf(&quot;输入第%d个学生的信息\n&quot;, i+1);</div><div class="line">		printf(&quot;姓名=%s,年龄=%d,分数=%f \n&quot;, pArr[i].name,pArr[i].age,pArr[i].sorce);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -483,13 +454,13 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
+    <a class="article-category-link" href="/categories/C/">C</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码片段/">代码片段</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
       
@@ -509,11 +480,11 @@
 
 
   
-    <article id="post-java9" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-c3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/28/java9/" class="article-date">
-      <time datetime="2016-10-28T08:11:10.839Z" itemprop="datePublished">2016-10-28</time>
+      <a href="/2016/11/03/c3/" class="article-date">
+      <time datetime="2016-11-03T15:07:14.210Z" itemprop="datePublished">2016-11-03</time>
 </a>
     </div>
   
@@ -526,7 +497,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java9/">6.3 面向对象的三大特性（多态性）</a>
+      <a class="article-title" href="/2016/11/03/c3/">利用指针交换两个值（C语言）</a>
     </h1>
   
 
@@ -536,14 +507,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="定义-（继承的基础上）"><a href="#定义-（继承的基础上）" class="headerlink" title="定义 （继承的基础上）"></a>定义 （继承的基础上）</h4><blockquote>
-<p>通过类实例化生成的对象具有多种形态</p>
-</blockquote>
-<h4 id="1-引用的多态"><a href="#1-引用的多态" class="headerlink" title="1.引用的多态"></a>1.引用的多态</h4><pre><code>1. 父类的引用可以指向本类对象
-2. 父类的引用可以指向子类对象
-</code></pre><h4 id="2-方法的多态"><a href="#2-方法的多态" class="headerlink" title="2.方法的多态"></a>2.方法的多态</h4><pre><code>1. 创建本类对象时，调用的方法为本类的方法
-2. 创建子类对象时，调用的方法为子类重写的方法或者继承的方法
-</code></pre>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"># include &lt;stdio.h&gt;</div><div class="line"></div><div class="line">void exchange(int * p, int * q)</div><div class="line">&#123;</div><div class="line">	int t ;</div><div class="line">	t = *p ;</div><div class="line">	*p = *q ;</div><div class="line">	*q = t;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">	int a = 3;</div><div class="line">	int b = 5;</div><div class="line"></div><div class="line">	exchange(&amp;a, &amp;b);</div><div class="line">	printf(&quot;a= %d , b = %d&quot;, a, b);</div><div class="line"></div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -551,13 +516,13 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
+    <a class="article-category-link" href="/categories/C/">C</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码片段/">代码片段</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
       
@@ -579,7 +544,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
