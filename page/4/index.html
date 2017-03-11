@@ -150,7 +150,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/C语言/" style="font-size: 10px;">C语言</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/代码片段/" style="font-size: 10px;">代码片段</a> <a href="/tags/学习/" style="font-size: 15px;">学习</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+                        <a href="/tags/C语言/" style="font-size: 12.5px;">C语言</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/代码片段/" style="font-size: 12.5px;">代码片段</a> <a href="/tags/学习/" style="font-size: 17.5px;">学习</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
                     </div>
                 </section>
                 
@@ -231,6 +231,257 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-java8" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/28/java8/" class="article-date">
+      <time datetime="2016-10-28T08:11:10.614Z" itemprop="datePublished">2016-10-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/28/java8/">6.2 面向对象的三大特性（继承性）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote>
+<p>继承是类与类的一种关系  （单继承-只有一个父类）</p>
+</blockquote>
+<h4 id="继承的好处"><a href="#继承的好处" class="headerlink" title="继承的好处"></a>继承的好处</h4><ul>
+<li>子类拥有所有父类的属性和方法（不包括private 访问修饰符修饰的私有成员属性，和成员方法）</li>
+<li>实现代码的复用</li>
+</ul>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">class Dog extends Animal&#123;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><blockquote>
+<p>继承的方法可以重写<br>规则：返回值类型相同<br>    方法名相同<br>    参数类型及其个数相同</p>
+</blockquote>
+<h4 id="继承的初始化顺序"><a href="#继承的初始化顺序" class="headerlink" title="继承的初始化顺序"></a>继承的初始化顺序</h4><ol>
+<li>初始化父类的再初始化子类</li>
+<li>先执行初始化对象中的属性，再执行构造方法中的初始化</li>
+</ol>
+<h4 id="final-关键字"><a href="#final-关键字" class="headerlink" title="final 关键字"></a>final 关键字</h4><blockquote>
+<p>修饰类（最终类）<br>修饰方法（不允许重写）<br>属性 (初始化时必须有值，或者构造方法中赋值)<br>变量 (常量)</p>
+</blockquote>
+<h4 id="this-super-关键字-（特别是继承关系时）"><a href="#this-super-关键字-（特别是继承关系时）" class="headerlink" title="this super 关键字 （特别是继承关系时）"></a>this super 关键字 （特别是继承关系时）</h4><p>this 当前类的属性<br>super 父类的属性 （隐式的调用父类的构造方法）自定义的构造方法时应显示调用父类的构造方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">super();</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-java7" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/28/java7/" class="article-date">
+      <time datetime="2016-10-28T08:11:09.673Z" itemprop="datePublished">2016-10-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/28/java7/">6.1.2 面向对象三大特性（封装性的内部类）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h4 id="内部类（定义）"><a href="#内部类（定义）" class="headerlink" title="内部类（定义）"></a>内部类（定义）</h4><blockquote>
+<p>在一个类中，再定义一个类。这一个类（即包含了内部类的类称为外部类）</p>
+</blockquote>
+<h5 id="内部类的作用"><a href="#内部类的作用" class="headerlink" title="内部类的作用"></a>内部类的作用</h5><ol>
+<li>提供更好的封装性，可以把内部类隐藏在外部类之内，不允许同一个包中的其他类访问</li>
+<li>内部类的方法可以直接访问外部类的所有数据，包括私有（private）的数据</li>
+<li>方便</li>
+</ol>
+<h4 id="内部类的种类"><a href="#内部类的种类" class="headerlink" title="内部类的种类"></a>内部类的种类</h4><ol>
+<li>成员内部类 （普通内部类）</li>
+<li>静态内部类</li>
+<li>方法内部类</li>
+<li>匿名内部类</li>
+</ol>
+<h4 id="成员内部类-（普通内部类）"><a href="#成员内部类-（普通内部类）" class="headerlink" title="成员内部类 （普通内部类）"></a>成员内部类 （普通内部类）</h4><ol>
+<li>内部类的特性 可以访问外部类的所有成员（成员变量，成员方法），不会受到访问修饰符影响。</li>
+<li>必须先创建外部类对象后再new 创建一个内部类对象<br>// 内部类  对象名 = 外部类对象.new 内部类();<br>反之外部类不能直接使用内部类的成员变量，和成员方法。（即创建外部类对象后再创建内部类对象，之后使用内部类中方法）   </li>
+<li>外部类和内部类有相同的成员变量时，内部类默认使用内部类中的成员变量(若要访问则可以使用this关键字)</li>
+</ol>
+<h4 id="静态内部类-（用static-关键子修饰的内部类）"><a href="#静态内部类-（用static-关键子修饰的内部类）" class="headerlink" title="静态内部类 （用static 关键子修饰的内部类）"></a>静态内部类 （用static 关键子修饰的内部类）</h4><ol>
+<li>静态内部类不能直接访问外部类的非静态成员，可以通过<strong>new 外部类().成员变量</strong>的方式</li>
+<li>创建静态的内部类的对象时，不需要外部类的对象，可以直接创建  内部类 对象名 = new 内部类();</li>
+<li>访问外部类的静态成员变量 直接“类名.静态成员” （外部类和内部类相同静态成员情况下）</li>
+</ol>
+<h4 id="方法内部类"><a href="#方法内部类" class="headerlink" title="方法内部类"></a>方法内部类</h4><p>特性：不能使用访问控制符，不能static 修饰符 ,不能在外部类方法以外的地方使用。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-java6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/28/java6/" class="article-date">
+      <time datetime="2016-10-28T08:11:09.427Z" itemprop="datePublished">2016-10-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/28/java6/">6.1 面向对象的三大特性（封装性）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h1><blockquote>
+<p>定义:将类的某些信息隐藏在类的内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问</p>
+</blockquote>
+<ul>
+<li>某些信息（类的成员变量）</li>
+<li>类提供的方法（get、set方法 ）规范: get+成员变量名（有返回值）  set+成员变量名（无返回值）（IDE工具可以自动生成工具栏的source下）</li>
+</ul>
+<h4 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h4><ol>
+<li>只能通过规定的方法访问数据</li>
+<li>隐藏类的实例细节，方便修改和实现</li>
+</ol>
+<h4 id="封装的实现步骤"><a href="#封装的实现步骤" class="headerlink" title="封装的实现步骤"></a>封装的实现步骤</h4><ol>
+<li>修改属性的可见性   （设置为private）</li>
+<li>创建getter/setter 方法 （用于操作成员变量，成员变量的读写）</li>
+<li>在getter/setter 赋值的预处理</li>
+</ol>
+<h4 id="访问范围修饰符-（一般情况下，成员变量private-，成员方法public）"><a href="#访问范围修饰符-（一般情况下，成员变量private-，成员方法public）" class="headerlink" title="访问范围修饰符 （一般情况下，成员变量private ，成员方法public）"></a>访问范围修饰符 （一般情况下，成员变量private ，成员方法public）</h4><ol>
+<li>private (<strong>本类（即本类中的内部类和外部类</strong>）)</li>
+<li>default (默认，没有修饰符时) (<strong>本类、同包（同一个路径下</strong>)</li>
+<li>protected （ <strong>本类、同包 、子类</strong>）</li>
+<li>public （<strong>本类、同包 、子类、其他</strong>）</li>
+</ol>
+<h4 id="java-中的包管理"><a href="#java-中的包管理" class="headerlink" title="java 中的包管理"></a>java 中的包管理</h4><p>规范：写在代码package 下的第一行<br>包的使用：import com.music.myclass (推荐全小写)</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-java5" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -391,254 +642,9 @@
 
 
   
-    <article id="post-java3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/28/java3/" class="article-date">
-      <time datetime="2016-10-28T08:11:08.823Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java3/">3.0构造方法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="实例化一个类的基本代码-创建一个新的对象"><a href="#实例化一个类的基本代码-创建一个新的对象" class="headerlink" title="实例化一个类的基本代码 (创建一个新的对象)"></a>实例化一个类的基本代码 (创建一个新的对象)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Newclass class = new Newclass() 构造方法</div><div class="line">//其实这一段代码是先创建一个构造方法来创建一个新的对象</div></pre></td></tr></table></figure>
-<h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><blockquote>
-<p>构造方法是定义在java类中的一个用来初始化对象的方法  (主要用来初始化成员属性)</p>
-<p>只是一个类中特殊的成员方法作用:  </p>
-<ol>
-<li>创建一个对象  </li>
-<li>初始化类的成员属性值  </li>
-<li>构造方法与类同名且没有返回值</li>
-<li>可以指定参数（有参数的构造方法（初始值），无参数的构造方法）</li>
-<li>没有指定构造方法，系统会自动添加无参数的构造方法</li>
-<li>有指定构造方法，无论是否有参数，系统都不会添加无参数的构造方法</li>
-<li>构造方法的重载：方法名相同，参数不同的多种方法，调用时会根据不同的参数选择相应的方法</li>
-</ol>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-java2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/28/java2/" class="article-date">
-      <time datetime="2016-10-28T08:11:08.586Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java2/">2.0成员变量和局部变量</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="1-成员变量-（全局变量）"><a href="#1-成员变量-（全局变量）" class="headerlink" title="1.成员变量 （全局变量）"></a>1.成员变量 （全局变量）</h4><blockquote>
-<p>定义在类中定义，用来描述对象将要有什么</p>
-<ul>
-<li>类中所有方法都可以访问（可见的）  </li>
-<li>有默认值  </li>
-</ul>
-</blockquote>
-<h4 id="2-局部变量-（局部变量）"><a href="#2-局部变量-（局部变量）" class="headerlink" title="2.局部变量 （局部变量）"></a>2.局部变量 （局部变量）</h4><blockquote>
-<p>在类的方法中定义，在方法中为了临时保存数据</p>
-<ul>
-<li>只能在类中当前方法  </li>
-<li>必须定义默认值  </li>
-<li><ol>
-<li>在同一个方法中不允许有同名局部变量</li>
-</ol>
-</li>
-<li><ol>
-<li>在不同的方法中可以有同名的局部变量</li>
-</ol>
-</li>
-</ul>
-</blockquote>
-<h4 id="区别总结"><a href="#区别总结" class="headerlink" title="区别总结"></a>区别总结</h4><ol>
-<li>作用域不同</li>
-<li>初始值不同</li>
-<li>同名局部变量</li>
-<li>两类变量同名是，局部变量具有更高的优先级别（就近原则）</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-java1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/28/java1/" class="article-date">
-      <time datetime="2016-10-28T08:11:07.347Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/java1/">1.0类的概念</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><blockquote>
-<p>类是模子，确定对象将会拥有的属性和方法（是一个抽象的模板）<br>与对象的关系，对象是由类通过实例化生成的具体实体<br>类的重要性：所有java 程序都以类的class 为组织单元</p>
-</blockquote>
-<h2 id="类的特点"><a href="#类的特点" class="headerlink" title="类的特点"></a>类的特点</h2><blockquote>
-<p>类是对象的类型<br>具有<strong>相同属性和方法</strong>的一组对象的集合</p>
-</blockquote>
-<h4 id="1-类的属性-（属性–对象具有的各种特征）"><a href="#1-类的属性-（属性–对象具有的各种特征）" class="headerlink" title="1.  类的属性 （属性–对象具有的各种特征）"></a>1.  类的属性 （属性–对象具有的各种特征）</h4><blockquote>
-<p>每个对象的每个属性都拥有特定值<br>（由一个类，通过实例化生成的对象时拥有特定的值（其中这个特定的值一般由构造方法中初始化值））</p>
-</blockquote>
-<h4 id="2-类的方法"><a href="#2-类的方法" class="headerlink" title="2. 类的方法"></a>2. 类的方法</h4><blockquote>
-<p>对象执行的操作（能干什么，一般是动词）</p>
-</blockquote>
-<h4 id="3-类的组成-（类和方法）"><a href="#3-类的组成-（类和方法）" class="headerlink" title="3. 类的组成 （类和方法）"></a>3. 类的组成 （类和方法）</h4><h4 id="4-定义一个类的步骤"><a href="#4-定义一个类的步骤" class="headerlink" title="4. 定义一个类的步骤"></a>4. 定义一个类的步骤</h4><blockquote>
-<ol>
-<li>包名</li>
-<li>定义类名</li>
-<li>编写类的属性</li>
-<li>编写类的方法</li>
-</ol>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/java/">java</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 </div>
@@ -646,7 +652,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2016 LinxwFF
+                &copy; 2017 LinxwFF
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
