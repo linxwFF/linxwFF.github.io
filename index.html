@@ -368,6 +368,77 @@
 
 
   
+    <article id="post-laravel/Blade - 模板" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/09/laravel/Blade - 模板/" class="article-date">
+      <time datetime="2017-05-09T05:31:48.171Z" itemprop="datePublished">2017-05-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/09/laravel/Blade - 模板/">Blade - 模板</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h4 id="Blade-模板"><a href="#Blade-模板" class="headerlink" title="Blade - 模板"></a>Blade - 模板</h4><blockquote>
+<p>是laravel中的模板引擎</p>
+</blockquote>
+<h4 id="两大特性"><a href="#两大特性" class="headerlink" title="两大特性"></a>两大特性</h4><h6 id="1-模板继承"><a href="#1-模板继承" class="headerlink" title="1. 模板继承"></a>1. 模板继承</h6><blockquote>
+<p>@extends(‘layouts.app’)</p>
+<h6 id="2-切片"><a href="#2-切片" class="headerlink" title="2. 切片"></a>2. 切片</h6><p>@yield(‘content’)</p>
+<h6 id="3-引入其他页面"><a href="#3-引入其他页面" class="headerlink" title="3. 引入其他页面"></a>3. 引入其他页面</h6><p>@include(‘admin.layou.header’)</p>
+<h6 id="4-定义"><a href="#4-定义" class="headerlink" title="4. 定义"></a>4. 定义</h6><p>@section</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//父页面</div><div class="line">@section(&apos;定义&apos;)  </div><div class="line">内容</div><div class="line">@show</div><div class="line"></div><div class="line">//子页面实现</div><div class="line">@section(&apos;sidebar&apos;)</div><div class="line">    @parent</div><div class="line">    //对父类的追加</div><div class="line">    &lt;p&gt;This is appended to the master sidebar.&lt;/p&gt;</div><div class="line">@endsection</div><div class="line"></div><div class="line">//对父页面的传参</div><div class="line">@section(&apos;title&apos;, &apos;Page Title&apos;)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/laravel/">laravel</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-laravel/laravel-组件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -419,77 +490,6 @@
 <li>用命令刷出组件配置文件</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ php artisan vendor:publish</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/laravel/">laravel</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-laravel/Blade - 模板" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/05/09/laravel/Blade - 模板/" class="article-date">
-      <time datetime="2017-05-09T05:31:48.171Z" itemprop="datePublished">2017-05-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/laravel/Blade - 模板/">Blade - 模板</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="Blade-模板"><a href="#Blade-模板" class="headerlink" title="Blade - 模板"></a>Blade - 模板</h4><blockquote>
-<p>是laravel中的模板引擎</p>
-</blockquote>
-<h4 id="两大特性"><a href="#两大特性" class="headerlink" title="两大特性"></a>两大特性</h4><h6 id="1-模板继承"><a href="#1-模板继承" class="headerlink" title="1. 模板继承"></a>1. 模板继承</h6><blockquote>
-<p>@extends(‘layouts.app’)</p>
-<h6 id="2-切片"><a href="#2-切片" class="headerlink" title="2. 切片"></a>2. 切片</h6><p>@yield(‘content’)</p>
-<h6 id="3-引入其他页面"><a href="#3-引入其他页面" class="headerlink" title="3. 引入其他页面"></a>3. 引入其他页面</h6><p>@include(‘admin.layou.header’)</p>
-<h6 id="4-定义"><a href="#4-定义" class="headerlink" title="4. 定义"></a>4. 定义</h6><p>@section</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//父页面</div><div class="line">@section(&apos;定义&apos;)  </div><div class="line">内容</div><div class="line">@show</div><div class="line"></div><div class="line">//子页面实现</div><div class="line">@section(&apos;sidebar&apos;)</div><div class="line">    @parent</div><div class="line">    //对父类的追加</div><div class="line">    &lt;p&gt;This is appended to the master sidebar.&lt;/p&gt;</div><div class="line">@endsection</div><div class="line"></div><div class="line">//对父页面的传参</div><div class="line">@section(&apos;title&apos;, &apos;Page Title&apos;)</div></pre></td></tr></table></figure>
 
       
     </div>
