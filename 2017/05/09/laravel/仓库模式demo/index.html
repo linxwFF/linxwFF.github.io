@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>仓库模式DEMO | 林雄伟_个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="仓库模式DEMO1. 定义基类接口
+123456789&amp;lt;?phpnamespace App\Repositories\Contracts;interface BaseInterface&amp;#123;    public function allUsers();&amp;#125;
+2. 实现接口扩展抽象类
+123456789101112131415161718192021222324252627282">
+<meta property="og:type" content="article">
+<meta property="og:title" content="仓库模式DEMO">
+<meta property="og:url" content="http://linxwff.github.io/2017/05/09/laravel/仓库模式demo/index.html">
+<meta property="og:site_name" content="林雄伟_个人博客">
+<meta property="og:description" content="仓库模式DEMO1. 定义基类接口
+123456789&amp;lt;?phpnamespace App\Repositories\Contracts;interface BaseInterface&amp;#123;    public function allUsers();&amp;#125;
+2. 实现接口扩展抽象类
+123456789101112131415161718192021222324252627282">
+<meta property="og:updated_time" content="2017-05-09T05:19:54.930Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="仓库模式DEMO">
+<meta name="twitter:description" content="仓库模式DEMO1. 定义基类接口
+123456789&amp;lt;?phpnamespace App\Repositories\Contracts;interface BaseInterface&amp;#123;    public function allUsers();&amp;#125;
+2. 实现接口扩展抽象类
+123456789101112131415161718192021222324252627282">
+  
+    <link rel="alternative" href="/atom.xml" title="林雄伟_个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon1.jpg">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head1.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">LinxwFF</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">林雄伟_个人博客</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/categories/laravel/">php_laravel（框架）</a></li>
+                        
+                            <li><a href="/categories/php/">php(学习)</a></li>
+                        
+                            <li><a href="/categories/java/">java（学习）</a></li>
+                        
+                            <li><a href="/categories/c/">数据结构与算法</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=pJyTkJaWkpyTkuTV1YrHy8k" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/linxwFF/" title="github">github</a>
+                            
+                                <a class="fl QQ" target="_blank" href="http://wpa.qq.com/msgrd?V=1&Uin=874226876" title="QQ">QQ</a>
+                            
+                                <a class="fl wechat" target="_blank" href="http://opo4hqpqj.bkt.clouddn.com/Screenshot_2017-05-09-13-52-23-727_com.tencent.mm.png" title="wechat">wechat</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/C语言/" style="font-size: 10px;">C语言</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/laravel/" style="font-size: 12px;">laravel</a> <a href="/tags/php/" style="font-size: 16px;">php</a> <a href="/tags/代码片段/" style="font-size: 10px;">代码片段</a> <a href="/tags/学习/" style="font-size: 18px;">学习</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://linxwFF.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">只是一个为了早日实现财富自由，努力奋斗的有志青年。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">LinxwFF</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head1.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">LinxwFF</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">林雄伟_个人博客</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/categories/laravel/">php_laravel（框架）</a></li>
+                
+                    <li><a href="/categories/php/">php(学习)</a></li>
+                
+                    <li><a href="/categories/java/">java（学习）</a></li>
+                
+                    <li><a href="/categories/c/">数据结构与算法</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=pJyTkJaWkpyTkuTV1YrHy8k" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/linxwFF/" title="github">github</a>
+                    
+                        <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?V=1&Uin=874226876" title="QQ">QQ</a>
+                    
+                        <a class="wechat" target="_blank" href="http://opo4hqpqj.bkt.clouddn.com/Screenshot_2017-05-09-13-52-23-727_com.tencent.mm.png" title="wechat">wechat</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-laravel/仓库模式demo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/09/laravel/仓库模式demo/" class="article-date">
+      <time datetime="2017-05-09T05:18:37.304Z" itemprop="datePublished">2017-05-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      仓库模式DEMO
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/laravel/">laravel</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="仓库模式DEMO"><a href="#仓库模式DEMO" class="headerlink" title="仓库模式DEMO"></a>仓库模式DEMO</h2><pre><code>1. 定义基类接口
+</code></pre><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Contracts</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">BaseInterface</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">allUsers</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>2. 实现接口扩展抽象类
+</code></pre><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Eloquent</span>;</div><div class="line"></div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Contracts</span>\<span class="title">BaseInterface</span>;</div><div class="line"><span class="comment">// 模式基类</span></div><div class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</div><div class="line"><span class="comment">// 容器</span></div><div class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Container</span>\<span class="title">Container</span> <span class="title">as</span> <span class="title">App</span>;</div><div class="line"></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Repository</span> <span class="keyword">implements</span> <span class="title">BaseInterface</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">/*App容器*/</span></div><div class="line">    <span class="keyword">protected</span> $app;</div><div class="line"></div><div class="line">    <span class="comment">/*操作model*/</span></div><div class="line">    <span class="keyword">protected</span> $model;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(App $app)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;app = $app;</div><div class="line">        <span class="keyword">$this</span>-&gt;makeModel();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 创建指定的 model</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">makeModel</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $model = <span class="keyword">$this</span>-&gt;app-&gt;make(<span class="keyword">$this</span>-&gt;model());</div><div class="line">        <span class="comment">/*是否是Model实例*/</span></div><div class="line">        <span class="keyword">if</span> (!$model <span class="keyword">instanceof</span> Model)&#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RepositoryException(<span class="string">"Class &#123;$this-&gt;model()&#125; must be an instance of Illuminate\\Database\\Eloquent\\Model"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">$this</span>-&gt;model = $model;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 指定子类的model</span></div><div class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">function</span> <span class="title">model</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">    <span class="comment">// 实现基类接口的方法</span></div><div class="line">    <span class="comment">// 获取所有用户信息</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">allUsers</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;model-&gt;all();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>3. 接口抽象类的具体实现类
+</code></pre><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Eloquent</span>;</div><div class="line"></div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Eloquent</span>\<span class="title">Repository</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Models</span>\<span class="title">User</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRepository</span> <span class="keyword">extends</span> <span class="title">Repository</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 实现抽象类的方法  返回一个UserModel对象实例</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">model</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> User::class;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 以下可以重新基类方法</span></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>4. 控制器中调用
+</code></pre><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Eloquent</span>\<span class="title">UserRepository</span> <span class="title">as</span> <span class="title">UserRepo</span>;</div><div class="line"></div><div class="line"><span class="comment">//私有成员方法</span></div><div class="line"><span class="keyword">protected</span> $userRepo;</div><div class="line"></div><div class="line"><span class="comment">//构造方法中注入实现类</span></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(UserRepo $userRepo)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">$this</span>-&gt;userRepo = $userRepo;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//调用接口实现类的方法</span></div><div class="line"><span class="keyword">$this</span>-&gt;userRepo-&gt;allUsers()</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/05/09/laravel/仓库模式demo/">仓库模式DEMO</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 LinxwFF 的个人博客">LinxwFF</a></p>
+        <p><span>发布时间:</span>2017年05月09日 - 13时18分</p>
+        <p><span>最后更新:</span>2017年05月09日 - 13时19分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/09/laravel/仓库模式demo/" title="仓库模式DEMO">http://linxwff.github.io/2017/05/09/laravel/仓库模式demo/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://linxwff.github.io/2017/05/09/laravel/仓库模式demo/　　作者: LinxwFF" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/05/09/laravel/laravel_session机制/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          laravel_session机制
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/11/php/php_03/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP的数组排序算法</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#仓库模式DEMO"><span class="toc-number">1.</span> <span class="toc-text">仓库模式DEMO</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/05/09/laravel/仓库模式demo/" data-title="仓库模式DEMO" data-url="http://linxwff.github.io/2017/05/09/laravel/仓库模式demo/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/05/09/laravel/laravel_session机制/" title="上一篇: laravel_session机制">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/11/php/php_03/" title="下一篇: PHP的数组排序算法">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/Eloquent ORM -关联关系/">Eloquent ORM -关联关系</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/关于前端主题的引人/">关于前端主题的引人</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/Blade - 模板/">Blade - 模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/laravel-组件/">laravel-组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/权限管理/">权限管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/laravel 验证 Request/">laravel 验证 Request</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/自定义登录认证驱动/">自定义登录认证驱动</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/migration基本使用/">migration基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/Composer 包依赖管理工具/">Composer 包依赖管理工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/laravel_session机制/">laravel_session机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/laravel/仓库模式demo/">仓库模式DEMO</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/php/php_03/">PHP的数组排序算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/php/php_02/">PHP中的魔术方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/php/php_01/">PHP中的数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/c/c7/">冒泡排序（C语言）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/c/c6/">动态内存创建一维数组（C语言）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/c/c5/">结构体基础（C语言）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/c/c4/">结构体学生信息顺序输出（C语言）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/c/c3/">利用指针交换两个值（C语言）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/c/c2/">函数遍历输出数组元素（C语言）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/c/c1/">一元二次方程（C语言）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java13/">10.接口</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java12/">9.0java 抽象类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java11/">8.0java 引用类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java10/">7.0java 中的object 类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java9/">6.3 面向对象的三大特性（多态性）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java8/">6.2 面向对象的三大特性（继承性）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java7/">6.1.2 面向对象三大特性（封装性的内部类）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java6/">6.1 面向对象的三大特性（封装性）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java5/">5.0java 中的static使用的静态方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java4/">4.0java 中的static使用的静态变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java3/">3.0构造方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java2/">2.0成员变量和局部变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/java/java1/">1.0类的概念</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 LinxwFF
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
